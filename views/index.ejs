@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <select name="cat">
+        <option value="/shoe">shoe</option>
+        <option value="/shirt">shirt</option>
+        <option value="/watch">watch</option>
+        <option value="/phone">phone</option>
+      </select>
+      <input type="file" name="photo" />
+      <input type="submit" value="submit" name="">
+    </form>
+
+
+    <% for (const [key, value] of result ) { %>
+      <ul>
+        <li><%= key  %> : <%=value%> <%=path%></li>
+      </ul>
+      <img src='<%=path%><%=key%>' width='300px' height='300px'>
+    <% } %>
+  </body>
+</html>
